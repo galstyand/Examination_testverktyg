@@ -10,15 +10,15 @@ def step_given_navigate_to_add_book(context):
 
 @when(u'användaren fyller i \'Titel\'')
 def step_fill_title(context):
-    AddBook.title(context, "Book title")
+    AddBook.title_fill(context, "Book title")
 
 @when(u'användaren fyller i \'Författare\'')
 def step_fill_author(context):
-    AddBook.author(context, "Book author")
+    AddBook.author_fill(context, "Book author")
 
 @when(u'användaren klickar på \'Lägg till ny bok\' knappen')
 def step_click_add(context):
-    AddBook.add(context)
+    AddBook.add_click(context)
 
 @then(u'boken läggs till som en ny rad i \'Katalog\'')
 def step_impl(context):
