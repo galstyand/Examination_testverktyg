@@ -1,6 +1,6 @@
 from behave import given, when, then
 from playwright.sync_api import expect
-from pages.navigation_page import PageHeader
+from pages.page_header import PageHeader
 
 @given(u'Användaren navigerar till Läslistan')
 def step_impl(context):
