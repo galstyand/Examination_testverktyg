@@ -1,6 +1,6 @@
 from playwright.sync_api import expect
-from pages.add_book_page import AddBook
-from pages.catalog import Catalog
+from pages.page_add_book import AddBook
+from pages.page_catalog import Catalog
 from behave import given, when, then
 
 @given(u'användaren navigerar till \'Lägg till bok\'')
