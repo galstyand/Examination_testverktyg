@@ -13,3 +13,16 @@ class Catalog:
     def click_on_heart(self, title):
         button_heart = self.page.locator(f"[data-testid='star-{title}']")
         button_heart.click()
+
+    def get_books_with_selected_star(self):
+        books = self.page.locator("div.book")
+        count = books.count()
+        selected_books = []
+
+        for i in range(count):
+            book = books.nth(i)
+            star = book.locator(".star.selected")
+            if star.count() > 0:
+                selected_books.append(book)
+
+        return selected_books
