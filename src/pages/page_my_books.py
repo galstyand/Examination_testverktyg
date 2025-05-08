@@ -11,3 +11,9 @@ class MyBooks:
         if locator.count() == 0:
             return None  # Texten hittades inte – hanteras i testet
         return locator
+
+    def find_book_by_title(self, titel):
+        locator = self.page.locator(f"[data-testid='fav-{titel}']")
+        if locator.count() == 0:
+            return None  # Texten hittades inte – hanteras i testet
+        return locator
